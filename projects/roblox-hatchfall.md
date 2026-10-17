@@ -1,6 +1,6 @@
 ---
 title: Roblox — Hatchfall / Fuzmorph
-updated: 2026-10-16
+updated: 2026-10-17
 tags: [projects, roblox, hatchfall, fuzmorph, active]
 ---
 
@@ -14,13 +14,13 @@ Maximize money on Roblox. Project budget **$500 total over ~2 months**; **$0 spe
 - **Game 2 — Fuzmorph** — glitch-farm reskin of the same template.
 - Game 3 Street Hoops — design-only, parked.
 
-## Status (2026-10-16)
+## Status (2026-10-17)
 - **Phase 1 in progress.** Step-6 **"6-egg" belt-carry egg loop**:
   - `6e.1` plot ownership ✅ built; `6e.2` belt + readability ✅ built.
   - `6e.3` claim (money path) ✅ **BUILT + APPROVED** — Studio harness green (38/38 at the time).
   - `6e.6` odds disclosure ✅ **APPROVED WITH CHANGES**, applied.
   - `6e.4` carry + finalize ✅ **BUILT + APPROVED WITH CHANGES**, all four changes applied. **Closed green in Studio: 53/53 assertions**, pinned order `claim → finalize → offline → placement`, profile restored.
-  - `6e.5` tag steal (steal-during-carry) — **spec commissioned**, packet on file, awaiting Spark's verdict. Build is not authorised until that verdict lands.
+  - `6e.5` tag steal (steal-during-carry) — **BUILT + APPROVED WITH CHANGES** (Q39–Q44), all applied. **Studio harness CLOSED green: 85/85 assertions**, pinned order `claim → tag → finalize → offline → placement`, profile restored. Remaining: Loic's feel pass + the true 2-client tag in the step-8 multi-player pass.
 - Economy freeze **CLOSED** (Spark E1–E4 re-review approved).
 - Save layer APPROVED WITH CHANGES — all applied. Phase 0 passed.
 
