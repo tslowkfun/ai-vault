@@ -15,7 +15,12 @@ Maximize money on Roblox. Project budget **$500 total over ~2 months**; **$0 spe
 - Game 3 Street Hoops — design-only, parked.
 
 ## Status (2026-10-16)
-- **Phase 1 in progress.** Current build is the step-6 **"6-egg" belt-carry egg loop**: `6e.1` plot ownership ✅ built; `6e.2` belt + readability ✅ built; `6e.3` claim (money path) spec on file, awaiting Spark's verdict.
+- **Phase 1 in progress.** Step-6 **"6-egg" belt-carry egg loop**:
+  - `6e.1` plot ownership ✅ built; `6e.2` belt + readability ✅ built.
+  - `6e.3` claim (money path) ✅ **BUILT + APPROVED** — Studio harness green (38/38 at the time).
+  - `6e.6` odds disclosure ✅ **APPROVED WITH CHANGES**, applied.
+  - `6e.4` carry + finalize ✅ **BUILT + APPROVED WITH CHANGES**, all four changes applied. **Closed green in Studio: 53/53 assertions**, pinned order `claim → finalize → offline → placement`, profile restored.
+  - `6e.5` tag steal (steal-during-carry) — **spec commissioned**, packet on file, awaiting Spark's verdict. Build is not authorised until that verdict lands.
 - Economy freeze **CLOSED** (Spark E1–E4 re-review approved).
 - Save layer APPROVED WITH CHANGES — all applied. Phase 0 passed.
 
