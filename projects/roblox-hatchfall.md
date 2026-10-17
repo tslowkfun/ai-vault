@@ -21,6 +21,8 @@ Maximize money on Roblox. Project budget **$500 total over ~2 months**; **$0 spe
   - `6e.6` odds disclosure ✅ **APPROVED WITH CHANGES**, applied.
   - `6e.4` carry + finalize ✅ **BUILT + APPROVED WITH CHANGES**, all four changes applied. **Closed green in Studio: 53/53 assertions**, pinned order `claim → finalize → offline → placement`, profile restored.
   - `6e.5` tag steal (steal-during-carry) — **BUILT + APPROVED WITH CHANGES** (Q39–Q44), all applied. **Studio harness CLOSED green: 85/85 assertions**, pinned order `claim → tag → finalize → offline → placement`, profile restored. Remaining: Loic's feel pass + the true 2-client tag in the step-8 multi-player pass.
+  - **Step 6 "6-egg" COMPLETE.** The whole belt-carry loop (spawn → claim → carry → finalize/tag) is built and approved; the two remaining items (Loic's in-Studio feel pass, the true 2-client tag) ride step 8's multi-player pass.
+- **Step 7 — progression shell — SPEC COMMISSIONED (2026-10-17).** Deliverable `docs/reviews/step7-progression-shell-spec.md` (SPEC ONLY; no build). Covers rebirth UI + handler on the frozen `Economy` rebirth, daily rewards (7-day UTC, day-7 free Luck Potion), first-run tutorial, and display-only leaderboards. Open questions **Q45–Q51** await Spark's verdict; the build is authorised only by that verdict.
 - Economy freeze **CLOSED** (Spark E1–E4 re-review approved).
 - Save layer APPROVED WITH CHANGES — all applied. Phase 0 passed.
 
