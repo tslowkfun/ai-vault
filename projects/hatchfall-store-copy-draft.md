@@ -24,7 +24,7 @@ this copy on purpose — they are still DRAFT.
 | Collect-and-steal creature nursery sim | `PROJECT.md` S3 Game 1; title LOCKED | BUILT |
 | Eggs on a conveyor, bought with coins | `BeltService`, `Config.Economy.Eggs` | BUILT |
 | Carry to your hatch zone, hatch | `CarryService`, `FinalizeService`, `HatchFlow` | BUILT |
-| Place creatures on income pads, collect coins | `BaseService`, `IncomeService` | BUILT |
+| Place creatures on income pads, earn coins as they accrue | `BaseService`, `IncomeService` | BUILT |
 | 6 pads → 30 pads | `Config.Base.DefaultSlots/MaxSlots` | BUILT |
 | Up to 10 owners per server ("9 other") | `Config.Map.PlayerCap = 10` | BUILT |
 | Steal a **placed** creature | `StealService`/`StealFlow` (creature transfer only) | BUILT |
@@ -39,7 +39,7 @@ this copy on purpose — they are still DRAFT.
 
 Deliberately **not** claimed (feature absent or unbuilt): mutations (Q7 closed),
 trading, pets that follow you, ranked/PvP ladder, prizes, events, season pass,
-VIP/2x passes, auto-collect, faster hatch, cosmetics, coin packs, limited
+VIP/2x passes, faster hatch, cosmetics, coin packs, limited
 creatures, "free", "guaranteed", any Robux price.
 
 `Stats` note: leaderboards are display-only, so "bragging rights, no prizes" is
@@ -48,12 +48,12 @@ locked by `PROJECT.md` quick answer 2 and must not drift into a reward promise.
 ## 2. Game description (draft A)
 
 Roblox description limit at draft time is 1,000 characters — **verify in Creator
-Hub**; this draft is **~950 characters including line breaks**. Em dashes are
+Hub**; this draft is **~975 characters including line breaks**. Em dashes are
 used instead of `--`. No emoji (nothing to hide behind, and it reads cleaner on
 mobile).
 
 ```text
-Hatchfall is a collect-and-steal creature nursery simulator. Eggs ride the conveyor — buy one with in-game coins, carry it to your hatch zone, and see what hatches. Place creatures on income pads, collect coins, and grow your nursery from 6 pads to 30.
+Hatchfall is a collect-and-steal creature nursery simulator. Eggs ride the conveyor — buy one with in-game coins, carry it to your hatch zone, and see what hatches. Place creatures on income pads, earn coins as they accrue, and grow your nursery from 6 pads to 30.
 
 You share the server with up to 9 other nursery owners. Slip into a rival's base and steal a placed creature, or lock your base and keep what is yours. Stolen creatures can be recovered: your first recovery each day is free, later ones cost coins, and the window closes 30 minutes after the theft.
 
@@ -80,14 +80,15 @@ Draft notes:
 | # | Tagline | Best use | Veto check |
 |---|---|---|---|
 | 1 | **Hatch it. Carry it. Guard it.** | Ad line / first line of a post | Three real verbs from the loop; no claims |
-| 2 | **Rare creatures don't hatch themselves.** | Description opener variant / social | "Rare" is a real tier; no odds or guarantee implied |
+| 2 | **Rare-tier creatures don't hatch themselves.** | Description opener variant / social | "Rare" names the tier only ("Rare-tier"); no odds, likelihood or guarantee implied |
 | 3 | **Your nursery. Your lock. Your problem.** | Short promo video / Discord | Edgy tone; lock is real; no power claim |
 | 4 | **Steal a creature. Make a rival.** | Ad copy targeting PvP-curious players | Accurate: one creature, not a base raid |
 | 5 | **Six pads to thirty. One belt between.** | Thumbnail alt text / social | Exact progression numbers; no "grind" promise |
 
 Banned in all taglines: free, best, guaranteed, jackpot, lucky, insane, 100%,
 limited time, "rarest", "OP", "win", any Robux/price mention, any comparison to
-another game by name.
+another game by name, and **any likelihood use of "rare"** ("rare drops", "rare
+chance", "hatch something rare"). "Rare" may appear only as the tier's name.
 
 ## 4. Icon concept brief (for a Fiverr artist)
 
@@ -153,12 +154,14 @@ rival base second, everything else third. Three focal elements maximum.
 
 **Text — optional, one line:**
 - Variant A: **no text** (primary; best for mobile).
-- Variant B: **"STEAL THE RARE ONES"** (4 words), bottom-left, heavy rounded
-  sans, cream on a dark scrim, ≤ 18% of frame height.
+- Variant B: **"STEAL THE RARE TIER"** (4 words) — "Rare" is the tier label,
+  not a likelihood claim; tier-free fallback **"STEAL THE GOOD ONES"**.
+  Bottom-left, heavy rounded sans, cream on a dark scrim, ≤ 18% of frame height.
 - Variant C: **no text, tighter crop** on the cracking egg + lock (tests the egg
   as the hook).
 - Banned text: free, best, guaranteed, jackpot, lucky, 100%, "limited time",
-  prices, odds numbers, fake UI ("Claim", "Buy now"), any competitor name.
+  prices, odds numbers, any likelihood use of "rare", fake UI ("Claim", "Buy
+  now"), any competitor name.
 
 **No casino framing:** no reels, dice, chips, roulette, spinning crates, "!"
 bursts, payout tables, or fake purchase prompts. The egg crack is anticipation of
@@ -200,7 +203,7 @@ in Creator Hub (Simulator) is separate and set by Loic.
 | offline | **yes** | paragraph 3 |
 | leaderboard | **yes** | paragraph 3 |
 | daily | **yes** | paragraph 3 |
-| rare | no | true (rarity tiers) but currently unclaimed; adding it must not imply odds |
+| rare | no | the **tier name** only; true to the game's rarity tiers, but unclaimed as a keyword — if ever added it must not imply likelihood or odds |
 | pets | no | creatures are placed, not following pets — avoid the false expectation |
 | adopt | no | no adoption mechanic |
 | trade | no | no trading |
@@ -212,8 +215,9 @@ in Creator Hub (Simulator) is separate and set by Loic.
 | free / Robux / codes | **never** | false or policy-risky |
 
 Do not stuff: the description already uses the core genre words naturally. If
-search performance is weak after launch, add at most one true term ("rare") and
-re-run the ledger check — never add a term the game does not honor.
+search performance is weak after launch, add at most one true term (the **Rare
+tier** label) and re-run the ledger check — never add a term the game does not
+honor.
 
 ## 7. Open items for Spark / Loic
 
