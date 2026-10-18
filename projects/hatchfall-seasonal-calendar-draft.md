@@ -12,9 +12,10 @@ owner: Pi
 code and changes no repo. Facts dated **2026-10-18** and read from the canonical
 repo `tslowkfun/roblox-games` (local `C:\dev\roblox-games`).
 
-Companion: `projects/hatchfall-christmas-event-draft.md` — owned by a **separate
-session**. This note does not define Christmas content; it fixes the envelope
-Christmas must fit and the exact surfaces every later event swaps.
+Companion: `projects/hatchfall-christmas-event-draft.md` — being drafted by a
+**separate session** (not created or edited here). This note does not define
+Christmas content; it fixes the envelope Christmas must fit and the exact
+surfaces every later event swaps.
 
 ## 1. The one rule
 
@@ -67,7 +68,7 @@ the problem.
 | # | System | Why it cannot wait | Minimal shape | Gate |
 |---|---|---|---|---|
 | **NEW-1** | `SeasonalCalendar` + `SeasonService` (UTC window check) + belt filter | Nothing reads event state; per-event code would otherwise be needed | `SeasonalCalendar.events[id] = { startUtc, endUtc, eggId?, limitedCreatureId, cosmeticIds }`; pure `active(now)` / `beltWeight(eggId, now)`; `BeltService` asks it instead of a literal | Spark review; Lune suite for window edges |
-| **NEW-2** | Per-egg creature pool (`pool = "event:<id>"`) read by `HatchRoll` and `OddsData.computeDisclosure` | Without it, event rows leak into base eggs and dilute disclosed live odds | Add `pool` to the egg row; one resolver used by both roll and disclosure (never fork the table) | Spark review (odds surface) + `odds_disclosure_test` |
+| **NEW-2** | Per-egg creature pool (`pool = "event:<id>"`) read by `HatchRoll` and `OddsData.computeDisclosure` | Without it, event rows leak into base eggs and dilute disclosed live odds | Add `pool` to the egg row; the `event` tag on each creature row is what the resolver filters on; one resolver used by both roll and disclosure (never fork the table) | Spark review (odds surface) + `odds_disclosure_test` |
 | **NEW-3** | Limited direct-pick purchase + idempotent mint | No non-egg path mints a creature; a purchase must mint exactly once, with no roll | Product id → `SeasonalLimitedService` receipt handler → append one `CreatureRecord` (unplaced, `slot = nil`); `stats.totalHatches` untouched; no `OddsData` involvement | **Money path — Spark audit before any sale** |
 | **NEW-4** | Cosmetic catalogue + equip/apply runtime | `Template.equipped` is a promise with no catalogue and no applier | `Cosmetics.luau` rows keyed by id → `nurserySkin` / `trail` / `hatchEffect`; equip writes the existing fields; no new fields | Spark review (monetization) |
 | **NEW-5** | Event banner + showcase pedestal | Nothing in-world reads event state | Signage at spawn plaza / one pedestal; display-only; direct "Buy" card, **never** a roll visual; `check_map` door-column pass in the same commit | Spark + `check_map` / `check_parts` |
