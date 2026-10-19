@@ -82,7 +82,7 @@ Creator Hub**; this draft is **912 characters including line breaks**. Em dashes
 are used instead of `--`. No emoji. No mutation claim (§3.2 explains why).
 
 ```text
-Fuzmorph is a collect-and-steal farm sim set in an arcade city. Eggs ride the conveyor — buy one with in-game coins, carry it to your zone, and hatch it. Place what you hatch on income pads, collect coins, and grow your farm from 6 pads to 30.
+Fuzmorph is a collect-and-steal farm sim set in an arcade city. Eggs ride the conveyor — buy one with in-game coins, carry it to your zone, and hatch it. Place what you hatch on income pads, earn coins as they accrue, and grow your farm from 6 pads to 30.
 
 You share the server with up to 9 other farm owners. Slip into a rival's farm and steal a placed creature, or lock your farm and keep what is yours. Stolen creatures can be recovered: your first recovery each day is free, later ones cost coins, and the window closes 30 minutes after the theft.
 
