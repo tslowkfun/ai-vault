@@ -109,7 +109,7 @@ Per-event checklist (all must be green before publish):
 
 | Slot | Window | Theme (one line) | Tier | New hatchable rows (by rarity) | Limited (PROPOSED price) | Cosmetics | Event egg |
 |---|---|---|---|---|---|---|---|
-| **Christmas** | Dec 1 → Jan 2 | The worked example: frost-lit nursery, gifts on the belt (content owned by the Christmas note) | A+ | **6**: 3 Common, 1 Uncommon, 1 Rare, 1 Epic | 1 — **799** | 3 | yes |
+| **Christmas** | Dec 1 → Jan 2 | The worked example: frost-lit nursery, gifts on the belt (content owned by the Christmas note) | A+ | **6**: 3 Common, 1 Uncommon, 1 Rare, 1 Epic | 1 — **599** (priced per Q64) | 3 | yes |
 | **New Year** | Jan 2 → Jan 8 | First Light: countdown sparks, aurora ribbons, a fresh ledger | micro | **0** | 1 — **299** | 3 | no |
 | **Valentine's** | Feb 7 → Feb 22 | Sweetheart Hollow: ribboned nests, warm pinks, paired charms | B | **3**: 1 Common, 1 Uncommon, 1 Rare | 1 — **399** | 3 | yes |
 | **Spring** | Mar 20 → Apr 13 | Bloomline: petals on the belt, pastel greens, new growth | B | **3**: 1 Common, 1 Uncommon, 1 Rare | 1 — **399** | 3 | yes |
@@ -136,7 +136,7 @@ prices are **Spark's** (money rule: never guessed). Event egg coin prices and
 - Theme: frost-lit nursery; the proof build for every NEW above.
 - Creatures: 6 rows — 3 Common, 1 Uncommon, 1 Rare, 1 Epic. Rows carry `event = "christmas"`.
 - Egg: `eggId = "christmas"`; rows `Common, Uncommon, Rare, Epic` (existing weights: 600/250/100/40 → ≈60.6% / 25.3% / 10.1% / 4.0% at Luck ×1); `pool = "event:christmas"`.
-- Limited: one direct-pick creature, no egg, no pool membership; **proposed 799**. Price band and final number: Spark.
+- Limited: one direct-pick creature, no egg, no pool membership; **599** (priced per Q64).
 - Cosmetics: `christmas_skin`, `christmas_trail`, `christmas_effect` (49–249 band).
 - Surfaces: `Creatures` (6 + 1 limited), `OddsData.Eggs` (+1), `Config.Economy.Eggs.christmas`, `SeasonalCalendar.events.christmas`, `Cosmetics` (3), `Monetization` (4 products), `Theme` banner accent.
 - Exact content (names, art, story) is the Christmas note's job — this note only fixes counts, rarities, band, and surfaces.
