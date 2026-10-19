@@ -7,7 +7,7 @@ tags: [projects, roblox, hatchfall, fuzmorph, active]
 # Roblox games — Hatchfall / Fuzmorph
 
 ## Objective
-Maximize money on Roblox. Project budget **$500 total over ~2 months**; **$0 spent** as of 2026-10-16. Monetization is casual-sim (passes, products, bundles, cosmetics) with no casino framing, no feed mechanics, and no pay-to-win in ranked contexts.
+Maximize money on Roblox. Project budget **$500 total over ~2 months**; **$25.00 spent as of 2026-10-17** (Loic's own CheaperInference top-up — the project's only spend so far, against the $500 budget). Monetization is casual-sim (passes, products, bundles, cosmetics) with no casino framing, no feed mechanics, and no pay-to-win in ranked contexts.
 
 ## Titles (LOCKED)
 - **Game 1 — Hatchfall** — collect-and-steal creature nursery sim.
@@ -24,7 +24,12 @@ Maximize money on Roblox. Project budget **$500 total over ~2 months**; **$0 spe
   - `8c` `ca6aae7` — `LockService.grant` as the SOLE `lockExpiresAt` writer, read-only `LockState` push, `Validate.lockRequest` deleted (Q26).
   - `8d` `f632f6d` — `RecoverService` holder-first commit, free-once/day then 5000 coins, no Robux path, strict `recoverRequest`.
   - `8e` `1e016ca` — harness lock/steal-refusal scenario + eighth exclusions belt (probe must delegate to `LockService.grant`, never assign `lockExpiresAt`). Packet regenerated (`3199790`).
-  - Remaining: Loic's in-Studio feel pass + the true **2-client steal/recover path** (a real steal, the lock blocking a live attacker, the recovery round trip) — manual gate only, per probe discipline.
+  - Remaining: Loic's in-Studio feel pass; the manual **2-client steal/recover path** gate (a real steal, the lock blocking a live attacker, the recovery round trip) is now folded into the step-10 closing gate — Studio run + republish + 2-client retest.
+- **Step 9 — monetization — CLOSED (2026-10-18).** Creator Hub complete (3 passes + 13 products on sale, IDs recorded in the game repo); Lane B (Sonnet) build audited APPROVED by Spark; closing Studio harness run 270/270, profile restored.
+- **Clean publish DONE (2026-10-18).** The default (publish-safe) build is in the Hatchfall place; the place stays PRIVATE until the Phase 4 launch.
+- **2-client live test DONE (2026-10-18)** (PC main + iPhone alt, live private place): hatch loop works live. Findings: (a) live interaction gap — placed creatures had no in-world visual, no client could initiate a placed steal, recover had no UI (server mechanics all built); (b) belt "starvation" diagnosed as designed cap pressure (8.33 eggs in flight vs cap 8), not a leak; (c) the tag/board contradiction diagnosed — the tag never fired (spawn-protection refusals), the Steals rise was a placed steal. Both diagnoses accepted by Spark; fixes commissioned.
+- **Step 10 — live interaction layer (2026-10-18).** Spec APPROVED WITH CHANGES by Spark (verdict in the game repo's `docs/reviews/spark-verdicts.md`); build running hands-off via the spark-bridge daemon (jobs 0012–0017: foundations, placed visuals, defect fixes, steal prompt, recover UI, panel exclusivity + checkers). Closing gate = Studio run + republish + 2-client retest.
+- **Phase-2 content plan (2026-10-18).** Landed in this vault and audited APPROVED by Spark: Christmas event first (flagship Nivellan income ruled 160), the 10-row roster expansion lands AFTER the Christmas window closes (mid-January), seasonal pass deferred, cosmetics await Spark's NEW-4 spec.
 
 ## Gates summary (PROJECT.md §5)
 - Scale if D1 retention ≥ 25%, avg session ≥ 10 min, ≥ 70% of new players pass minute 5, buyers ≥ 2%.
